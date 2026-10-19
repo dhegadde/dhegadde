@@ -10,9 +10,11 @@ Can a tiny trained add-on repair a language model compressed to about 2 bits? I 
 
 **What I've built**
 - **Production voice AI (xLead):** as the technical subject matter expert at an AI voice startup, I built a RAG voice assistant on the Claude API with FastAPI services that handled live calls for a paying client, booked real appointments through Google Calendar, and onboarded 15+ businesses through a Stripe Connect OAuth flow. *(Code is private.)*
-- **Agent evaluation:** multi-stage LLM pipelines with schema-checked stages, held-out benchmarks, and an LLM judge that caught all three planted hallucinations with no false positives.
+- **[Agent Eval Loop](https://github.com/dhegadde/agent-eval-loop):** a three-agent pipeline with a seeded benchmark, an LLM judge that caught all three planted hallucinations with no false positives, prompt optimization with rollback, and a human approval gate. The results log keeps the run where a 0.856 dev score fell to 0.422 on held-out data.
+- **[SecondBrain](https://github.com/dhegadde/secondbrain):** a private AI assistant for iPhone that runs a quantized LLM fully on the phone (llama.cpp, Qwen2.5 GGUF), with document scanning, local semantic search, agent pipelines and system actions.
+- **[Sleeper MCP](https://github.com/dhegadde/sleeper-mcp):** an MCP server that gives Claude 22 tools over my fantasy football leagues, backed by LightGBM quantile models; on two held-out seasons it matched Sleeper's own projections with calibrated ranges.
 - **Model serving:** a 27B model on vLLM under a hard cost cap, and quantization experiments with llama.cpp.
 
-**Tools:** Python · FastAPI · TypeScript · React · Next.js · PyTorch · Hugging Face Transformers / PEFT · vLLM · Claude, OpenAI, and Gemini APIs · GitHub Actions
+**Tools:** Python · FastAPI · TypeScript · React · Next.js · Swift / SwiftUI · PyTorch · Hugging Face Transformers / PEFT · vLLM · llama.cpp · MCP · Claude, OpenAI, and Gemini APIs · GitHub Actions
 
 📫 [LinkedIn](https://www.linkedin.com/in/dheeraj-gadde-5a6087185/) · dhegadde@gmail.com
